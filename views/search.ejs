@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title><%= title %></title>
+</head>
+<body>
+  <% if (user === -1) { %> 
+    <h2>User not found</h2>
+  <% } else { %>
+    <div>
+      ID: <%= user.id %>, Name: <%= user.firstName %> <%= user.lastName %> 
+      Email: <%= user.email %>
+    </div>
+    <% if (user.age) { %>
+      <div>Age: <%= user.age %></div>
+    <% } %>
+    <% if (user.bio) { %>
+      <div>Bio: <%= user.bio %></div>
+    <% } %>
+  <% } %>
+</body>
+</html>
